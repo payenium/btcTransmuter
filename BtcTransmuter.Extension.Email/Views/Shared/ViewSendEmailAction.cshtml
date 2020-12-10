@@ -1,0 +1,18 @@
+@using BtcTransmuter.Data.Models
+@using BtcTransmuter.Extension.Email.Actions.SendEmail
+@model BtcTransmuter.Data.Entities.RecipeAction
+@{
+    var data = Model.Get<SendEmailData>();
+}
+
+<div>
+    Send Email to <kbd>@data.To</kbd>
+    @if (!string.IsNullOrEmpty(data.Subject))
+    {
+        <span>with subject <kbd>@data.Subject</kbd></span>
+    }
+    @if (!string.IsNullOrEmpty(data.Body))
+    {
+        <span>with body <kbd>@data.Body</kbd>@(data.IsHTML? "(in HTML)": "")</span>
+    }
+</div>

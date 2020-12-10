@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\BtcTransmuter.Abstractions\BtcTransmuter.Abstractions.csproj"/>
+    </ItemGroup>
+</Project>

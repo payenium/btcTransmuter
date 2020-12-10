@@ -1,0 +1,14 @@
+@model RecipeActionFooterViewModel
+
+
+<pre class="mt-2">
+You can use <kbd>{{TriggerData.XXX}}</kbd> in the fields where XXX  is the property name of a field present in the data that triggered the trigger. 
+
+You can mix and match as many as you want. If you have a number, you may even do formulas: <br/><kbd>{{(TriggerData.NumberProperty / 2 * TriggerData.OtherNumberProperty)}}</kbd>
+
+<div style="overflow-y: auto; max-height: 50vh">
+    <partial name="PosData" model="@Model.Properties"/>
+</div>
+
+</pre>
+

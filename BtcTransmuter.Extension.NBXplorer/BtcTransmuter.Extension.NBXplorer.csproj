@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\BtcTransmuter.Abstractions\BtcTransmuter.Abstractions.csproj" />
+      <ProjectReference Include="..\BtcTransmuter.Extension.DynamicServices\BtcTransmuter.Extension.DynamicServices.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="NBXplorer.Client" Version="3.0.15" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\NBXplorerCreatePSBT\EditData.cshtml" />
+    </ItemGroup>
+</Project>

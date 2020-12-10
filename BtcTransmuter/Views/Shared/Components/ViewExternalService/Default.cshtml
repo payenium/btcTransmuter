@@ -1,0 +1,14 @@
+@model ViewExternalServiceViewModel
+
+@if (Model.ShowAllData)
+{
+    @($"{Model.ExternalServiceData.Name}({Model.ExternalServiceDescriptor.Name})")
+}
+@if (Model.ExternalServiceDescriptor == null)
+{
+    <span> Extension for this external service is not present</span>
+}
+else
+{
+    @await Html.PartialAsync(Model.ExternalServiceDescriptor.ViewPartial, Model.ExternalServiceData)
+}

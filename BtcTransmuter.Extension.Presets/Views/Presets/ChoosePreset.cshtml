@@ -1,0 +1,9 @@
+@model BtcTransmuter.Extension.Presets.PresetsController.ChoosePresetViewModel
+
+<ul>
+    @foreach (var preset in Model.Presets)
+    {
+        var data = @preset.GetLink();
+        <li><a asp-action="@data.ActionName" asp-controller="@data.ControllerName">@preset.Name</a> - @preset.Description</li>
+    }
+</ul>

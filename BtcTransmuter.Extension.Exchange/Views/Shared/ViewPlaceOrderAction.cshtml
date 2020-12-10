@@ -1,0 +1,11 @@
+@using BtcTransmuter.Data.Models
+@using BtcTransmuter.Extension.Exchange.Actions.PlaceOrder
+@using ExchangeSharp
+@model BtcTransmuter.Data.Entities.RecipeAction
+@{
+    var data = Model.Get<PlaceOrderData>();
+}
+
+<div>
+    Place <kbd>@(data.IsMargin ? "Margin" : "") @(data.IsBuy ? "Buy" : "Sell") @Enum.GetName(typeof(OrderType), data.OrderType)</kbd> Order of <kbd>@data.Amount</kbd> @if(!string.IsNullOrEmpty(@data.Price)){<kbd>at @data.Price</kbd>} on <kbd>@data.MarketSymbol</kbd>
+</div>

@@ -1,0 +1,29 @@
+@using BtcTransmuter.Extension.BtcPayServer.ExternalServices.BtcPayServer
+@model BtcTransmuter.Data.Entities.ExternalServiceData
+
+@{
+    var service = new BtcPayServerService(Model);
+    var data = service.GetData();
+}
+
+<dl class="dl-horizontal">
+    <dt>
+        Name
+    </dt>
+    <dd>
+        @service.Name
+    </dd>
+    <dt>
+        Server
+    </dt>
+    <dd>
+        @data.Server
+
+    </dd>
+    <dt>
+        Last checked
+    </dt>
+    <dd>
+        @(data.LastCheck.HasValue? data.LastCheck.Value.ToString("g"): "Never")
+    </dd>
+</dl>

@@ -1,0 +1,20 @@
+@using BtcTransmuter.Data.Models
+@using BtcTransmuter.Extension.BtcPayServer.Triggers.InvoiceStatusChanged
+@model BtcTransmuter.Data.Entities.RecipeTrigger
+@{
+    var data = Model.Get<InvoiceStatusChangedTriggerParameters>();
+}
+
+<div>
+    Btcpayserver Invoice Status Change to
+    <kbd>
+        @if (data.Conditions.Any())
+        {
+            @string.Join(" or ", data.Conditions.Select(condition => $"{condition.Status}({string.Join(" or ", condition.ExceptionStatuses)})"))
+        }
+        else
+        {
+            <span>Not configured</span>
+        }
+    </kbd>
+</div>

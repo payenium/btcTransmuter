@@ -1,0 +1,16 @@
+@model ViewRecipeTriggerViewModel
+@if (Model.TriggerDescriptor == null)
+{
+    <span> Extension for this trigger is not present</span>
+}
+else
+{
+    <partial name="@Model.TriggerDescriptor.ViewPartial" model="@Model.RecipeTrigger"></partial>
+}
+
+@if (Model.ExternalServiceData != null)
+ {
+     <div>
+         External Service: @Model.ExternalServiceData.Name
+     </div>
+ }

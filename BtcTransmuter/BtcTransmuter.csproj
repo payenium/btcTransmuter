@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    
+<TargetFramework>netcoreapp3.1</TargetFramework>
+<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <UserSecretsId>aspnet-BtcTransmuter-065A2226-96CE-4371-A96D-97EFFCF0B153</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Version>0.0.55</Version>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <PackageVersion>0.0.55</PackageVersion>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="entrypoint.sh" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.5" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BtcTransmuter.Abstractions\BtcTransmuter.Abstractions.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.BtcPayServer\BtcTransmuter.Extension.BtcPayServer.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.DynamicServices\BtcTransmuter.Extension.DynamicServices.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Email\BtcTransmuter.Extension.Email.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Exchange\BtcTransmuter.Extension.Exchange.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Lightning\BtcTransmuter.Extension.Lightning.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.NBXplorer\BtcTransmuter.Extension.NBXplorer.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Operators\BtcTransmuter.Extension.Operators.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Presets\BtcTransmuter.Extension.Presets.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Recipe\BtcTransmuter.Extension.Recipe.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Timer\BtcTransmuter.Extension.Timer.csproj" />
+    <ProjectReference Include="..\BTCTransmuter.Extension.Tor\BTCTransmuter.Extension.Tor.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Extension.Webhook\BtcTransmuter.Extension.Webhook.csproj" />
+    <ProjectReference Include="..\BtcTransmuter.Services\BtcTransmuter.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\site.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.min.css" />
+    <_ContentIncludedByDefault Remove="Views\Recipes\CreateRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Recipes\EditRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Recipes\GetRecipeLogs.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Recipes\GetRecipes.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Recipes\RemoveRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\Recipes\CreateRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\Recipes\EditRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\Recipes\GetRecipeLogs.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\Recipes\GetRecipes.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\Recipes\RemoveRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\AdminRecipeAccess\CreateRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\AdminRecipeAccess\EditRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\AdminRecipeAccess\GetRecipeLogs.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\AdminRecipeAccess\GetRecipes.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\AdminRecipeAccess\RemoveRecipe.cshtml" />
+    <_ContentIncludedByDefault Remove="Extensions\BtcTransmuter.Extension.Lightning\web.config" />
+    <_ContentIncludedByDefault Remove="Extensions\BtcTransmuter.Extension.Lightning\BtcTransmuter.Extension.Lightning.deps.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\vendors\bootstrap" />
+    <Folder Include="wwwroot\vendors\codemirror\mode" />
+  </ItemGroup>
+
+</Project>
